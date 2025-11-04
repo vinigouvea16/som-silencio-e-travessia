@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import FloatingWhatsappButton from './components/cta-button'
 
 const arizonaFlare = localFont({
   src: [
@@ -186,6 +187,7 @@ export default function RootLayout({
         className={`${arizonaFlare.variable} ${arizonaFlareCompressed.variable} ${arizonaSans.variable} antialiased`}
       >
         {children}
+        <FloatingWhatsappButton />
       </body>
     </html>
   )
