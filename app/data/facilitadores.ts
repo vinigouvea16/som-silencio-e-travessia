@@ -2,11 +2,18 @@ export interface Facilitador {
   id: string
   photoUrl: string
   name: string
-  role: string
+  role?: string
   description: string
 }
 
 export const facilitadores: Facilitador[] = [
+  {
+    id: '0',
+    photoUrl: '/visionarios/0.webp',
+    name: 'Conheça nossa equipe',
+    role: 'Arraste para o lado para saber mais',
+    description: '',
+  },
   {
     id: '1',
     photoUrl: '/visionarios/1.webp',

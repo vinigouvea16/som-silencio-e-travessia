@@ -10,7 +10,7 @@ import {
   DrawerTitle,
 } from '@/components/ui/drawer'
 import useEmblaCarousel from 'embla-carousel-react'
-import { Shell } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Shell } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState, useCallback } from 'react'
 
@@ -37,6 +37,14 @@ export default function Equipe() {
       emblaApi.off('select', onSelect)
     }
   }, [emblaApi, onSelect])
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
 
   const openDrawer = (facilitador: Facilitador) => {
     setSelectedFacilitador(facilitador)
@@ -76,48 +84,86 @@ export default function Equipe() {
           </p>
         </div>
 
-        {/* Carrousel */}
-        <div className="w-full overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {facilitadores.map(facilitador => (
-              <div
-                key={facilitador.id}
-                className="flex-[0_0_100%] min-w-0 flex flex-col items-center"
-              >
-                {/* Card com foto */}
-                {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+        {/* Carrousel com botões */}
+        <div className="relative w-full">
+          {/* Botão Anterior */}
+          <button
+            type="button"
+            onClick={scrollPrev}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-cream-light/80 text-brown-dark rounded-full p-2 transition-all shadow-lg"
+            aria-label="Anterior"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          {/* Botão Próximo */}
+          <button
+            type="button"
+            onClick={scrollNext}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-cream-light/80 text-brown-dark rounded-full p-2 transition-all shadow-lg"
+            aria-label="Próximo"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Carrousel */}
+          <div className="w-full overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {facilitadores.map(facilitador => (
                 <div
-                  className="m-10 bg-tan w-[70vw] flex flex-col cursor-pointer overflow-hidden group"
-                  onClick={() => openDrawer(facilitador)}
+                  key={facilitador.id}
+                  className="flex-[0_0_100%] min-w-0 flex flex-col items-center"
                 >
-                  <div className="relative w-full aspect-square overflow-hidden">
-                    <Image
-                      src={facilitador.photoUrl}
-                      alt={facilitador.name}
-                      fill
-                      className="object-cover p-10 pb-6"
-                    />
+                  {/* Card com foto */}
+                  {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+                  <div
+                    className={`m-10 bg-tan w-[70vw] flex flex-col overflow-hidden group ${
+                      facilitador.id !== '0'
+                        ? 'cursor-pointer'
+                        : 'cursor-default'
+                    }`}
+                    onClick={() =>
+                      facilitador.id !== '0' && openDrawer(facilitador)
+                    }
+                  >
+                    <div className="relative w-full aspect-square overflow-hidden">
+                      <Image
+                        src={facilitador.photoUrl}
+                        alt={facilitador.name}
+                        fill
+                        className="object-cover p-10 pb-6"
+                      />
+                    </div>
+
+                    {/* Texto fixo logo abaixo da imagem */}
+                    <div className="mb-4 flex justify-center">
+                      <span
+                        className={`text-sm uppercase font-family-arizona-sans ${
+                          facilitador.id === '0'
+                            ? 'text-transparent'
+                            : 'text-brown-dark'
+                        }`}
+                      >
+                        Ver história
+                      </span>
+                    </div>
                   </div>
 
-                  {/* Texto fixo logo abaixo da imagem */}
-                  <div className="mb-4 flex justify-center">
-                    <span className="text-sm uppercase font-family-arizona-sans text-brown-dark">
-                      Ver história
-                    </span>
+                  {/* Nome e formação */}
+                  <div className="text-center flex flex-col -mt-5 gap-2">
+                    <h3 className="text-brown-dark uppercase font-family-arizona-sans text-2xl font-medium tracking-tighter">
+                      {facilitador.name}
+                    </h3>
+                    {/* Só renderiza o role se existir e não for vazio */}
+                    {facilitador.role && (
+                      <p className="text-brown-dark/80 font-family-arizona-sans text-base w-3/4 mx-auto">
+                        {renderRole(facilitador.role)}
+                      </p>
+                    )}
                   </div>
                 </div>
-
-                {/* Nome e formação */}
-                <div className="text-center flex flex-col -mt-5 gap-2">
-                  <h3 className="text-brown-dark uppercase font-family-arizona-sans text-2xl font-medium tracking-tighter">
-                    {facilitador.name}
-                  </h3>
-                  <p className="text-brown-dark/80 font-family-arizona-sans text-base w-3/4 mx-auto">
-                    {renderRole(facilitador.role)}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
@@ -177,9 +223,6 @@ export default function Equipe() {
               {selectedFacilitador?.description}
             </p>
           </div>
-          {/* <DrawerClose className="absolute top-4 right-4 text-brown-dark">
-            ✕
-          </DrawerClose> */}
         </DrawerContent>
       </Drawer>
     </div>
