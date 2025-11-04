@@ -35,9 +35,9 @@ export const facilitadores: Facilitador[] = [
     id: '4',
     photoUrl: '/visionarios/4.webp',
     name: 'Blenda schneider',
-    role: 'Médica Psiquiatra | Saúde Mental Integrativa & Psicodélicos',
+    role: 'Médica | Saúde Mental Integrativa & Psicodélicos',
     description:
-      'Blenda é medica com foco na saúde mental integral. Atua unindo ciência, espiritualidade e estilo de vida. Tem formação em Medicina do Estilo de Vida(MEV Brasil), certificação internacional em Medicina Endocanabinoide(WeCann Academy) e é pós-graduanda em Psicoterapia Assistida por Psicodélicos(CAMP). Há mais de 10 anos estuda e vivencia experiências com enteógenos e a sabedoria dos povos indígenas',
+      'Blenda é medica com foco na saúde mental integral. Atua unindo ciência, espiritualidade e estilo de vida. Tem formação em Medicina do Estilo de Vida(MEV Brasil), certificação internacional em Medicina Endocanabinoide(WeCann Academy) e é pós-graduanda em Psicoterapia Assistida por Psicodélicos(CAMP). Há mais de 10 anos estuda e vivencia experiências com enteógenos e a sabedoria dos povos indígenas.',
   },
   {
     id: '5',
@@ -53,7 +53,7 @@ export const facilitadores: Facilitador[] = [
     name: 'Roberta Libardi',
     role: 'Psicóloga | Neurociência Afetiva e Saúde Mental Organizacional',
     description:
-      'Psicóloga com quase 25 anos de experiência em desenvolvimento humano, Roberta atua com foco em saúde mental no contexto organizacional. É membro da maior comunidade de Neurociência Afetiva e pós graduanda em Terapia Psicodélicas pelo CAMP. Palestrante e facilitadora, integra conhecimentos científicos e abordagens psicodélicas para transformar ambientes e ampliar a escuta nas relações',
+      'Psicóloga com quase 25 anos de experiência em desenvolvimento humano, Roberta atua com foco em saúde mental no contexto organizacional. É membro da maior comunidade de Neurociência Afetiva e pós graduanda em Terapia Psicodélicas pelo CAMP. Palestrante e facilitadora, integra conhecimentos científicos e abordagens psicodélicas para transformar ambientes e ampliar a escuta nas relações.',
   },
   {
     id: '7',
@@ -69,6 +69,6 @@ export const facilitadores: Facilitador[] = [
     name: 'Gabih moura',
     role: 'Multiartista Arteterapeuta',
     description:
-      'Guiou por três anos cerimônias com enteógenos na Europa e possui formação internacional em redução de danos e facilitação de plantas cerimoniais pela ICEERS Academy(Espanha) e em facilitação de cerimônias de cogumelos pela Fungi Academy(Guatemala). Atua como terapeuta e multiartista, conduzindo vivências que integram expressão simbólica, e escuta e expansão de consciência',
+      'Guiou por três anos cerimônias com enteógenos na Europa e possui formação internacional em redução de danos e facilitação de plantas cerimoniais pela ICEERS Academy(Espanha) e em facilitação de cerimônias de cogumelos pela Fungi Academy(Guatemala). Atua como terapeuta e multiartista, conduzindo vivências que integram expressão simbólica, e escuta e expansão de consciência.',
   },
 ]
