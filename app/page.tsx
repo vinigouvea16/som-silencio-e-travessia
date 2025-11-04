@@ -1,11 +1,19 @@
-import MobilePage from './components/Mobile Page/page'
+import DesktopGridLayout from './components/DesktopGridLayout'
+import DesktopPage from './components/DesktopPage/components/page'
+import MobilePage from './components/MobilePage/page'
 
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col max-w-[600px] mx-auto">
+      {/* MOBILE */}
+      <div className="lg:hidden">
         <MobilePage />
       </div>
+
+      {/* DESKTOP */}
+      <DesktopGridLayout>
+        <DesktopPage />
+      </DesktopGridLayout>
     </>
   )
 }
