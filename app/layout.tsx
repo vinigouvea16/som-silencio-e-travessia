@@ -173,7 +173,37 @@ const arizonaSans = localFont({
 
 export const metadata: Metadata = {
   title: 'Som, Silêncio e Travessia',
-  description: 'Imersão Integrativa enteógena | Los Niños + Brainstorm',
+  description: 'Imersão Integrativa Enteógena | Los Niños + Brainstorm',
+  keywords: [
+    'Brainstorm',
+    'autoconhecimento',
+    'expansão da mente',
+    'bem-estar',
+    'produtos naturais',
+  ],
+  openGraph: {
+    title: 'Som, Silêncio e Travessia',
+    description: 'Imersão Integrativa Enteógena | Los Niños + Brainstorm',
+    url: 'https://som-silencio-e-travessia.vercel.app/',
+    siteName: 'Brainstorm',
+    images: [
+      {
+        url: 'https://som-silencio-e-travessia.vercel.app/som-silencio-e-travessia-meta.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Los Niños + Brainstorm',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Som, Silêncio e Travessia',
+    description: 'Imersão Integrativa Enteógena | Los Niños + Brainstorm',
+    images: [
+      'https://som-silencio-e-travessia.vercel.app/som-silencio-e-travessia-meta.webp',
+    ],
+  },
 }
 
 export default function RootLayout({
