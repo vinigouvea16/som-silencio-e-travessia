@@ -45,7 +45,7 @@ export default function Processo() {
         </ul>
       </div>
       <a
-        href="#form"
+        href="#form1"
         className="uppercase rounded-sm font-medium text-cream-light font-family-arizona-flare bg-brown-dark text-xl px-2 py-1 w-fit"
       >
         inscrição

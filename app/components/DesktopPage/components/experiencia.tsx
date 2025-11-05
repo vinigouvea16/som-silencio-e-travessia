@@ -40,7 +40,7 @@ export default function Exp() {
         </span>
 
         <a
-          href="#form"
+          href="#form1"
           className="uppercase rounded-sm font-medium text-brown-dark bg-tan text-xl tracking-tighter px-2 py-1"
         >
           quero expandir

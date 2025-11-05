@@ -58,16 +58,19 @@ export default function Form() {
   }
 
   return (
-    <div className="flex flex-col py-8" id="form">
+    <div className="flex flex-col py-8">
       <div className="flex flex-col gap-8 items-center z-10 max-w-md mx-auto">
-        <h1 className="text-brown-dark text-4xl font-family-arizona-sans font-medium tracking-tighter max-w-[220px] text-justify">
+        <h1
+          className="text-brown-dark text-4xl font-family-arizona-sans font-medium tracking-tighter max-w-[220px] text-justify"
+          id="form1"
+        >
           Um convite à liberdade de ser, sentir e se reconectar com o que pulsa
           em silêncio dentro de você.
         </h1>
 
         {/* Investimento */}
         <div className="flex flex-col items-center gap-3">
-          <span className="border uppercase font-bold tracking-tighter text-2xl border-brown-medium rounded-full px-4 py-1 text-brown-dark font-family-arizona-sans">
+          <span className="border uppercase font-bold tracking-tighter text-2xl border-brown-medium rounded-full px-4 py-1  text-brown-dark font-family-arizona-sans">
             investimento: R$3.500
           </span>
           <p className="font-thin tracking-tighter text-center text-brown-dark font-family-arizona-sans text-2xl">
