@@ -10,9 +10,10 @@ import {
   DrawerTitle,
 } from '@/components/ui/drawer'
 import useEmblaCarousel from 'embla-carousel-react'
-import { ChevronLeft, ChevronRight, Shell } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState, useCallback } from 'react'
+import Spiral from '../../icons/spiral'
 
 export default function Equipe() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -67,10 +68,10 @@ export default function Equipe() {
       {/* Seção com carrousel */}
       <div className="flex flex-col mx-3 items-center relative">
         {/* Shell no fundo */}
-        <Shell
-          className="absolute -top-10 left-1/2 -translate-x-1/2 text-black/5 z-0"
+        <Spiral
+          className="absolute -top-20 left-1/2 -translate-x-1/2 text-black/5 z-0"
           size={400}
-          strokeWidth={1}
+          // strokeWidth={1}
         />
 
         {/* Textos */}

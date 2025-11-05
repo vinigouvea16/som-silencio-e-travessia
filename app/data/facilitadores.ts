@@ -2,7 +2,7 @@ export interface Facilitador {
   id: string
   photoUrl: string
   name: string
-  role?: string
+  role: string
   description: string
 }
 

@@ -11,9 +11,9 @@ export default function DesktopGridLayout({
     <div className="hidden lg:flex lg:flex-col min-h-screen bg-cream">
       {/* Borda superior com espaçamento */}
       <div className="flex h-[10vh] border-b border-dashed border-black/20">
-        <div className="flex-1 border-l border-dashed border-black/20" />
+        <div className="flex-1 " />
         <div className="w-[747px] border-x border-dashed border-black/20" />
-        <div className="flex-1 border-r border-dashed border-black/20" />
+        <div className="flex-1 " />
       </div>
 
       {/* Conteúdo central com divisórias */}
@@ -27,11 +27,11 @@ export default function DesktopGridLayout({
 
             {/* Conteúdo do componente */}
             <div className="flex">
-              <div className="flex-1 border-l border-dashed border-black/20" />
+              <div className="flex-1" />
               <div className="w-[747px] border-x border-dashed border-black/20">
                 {child}
               </div>
-              <div className="flex-1 border-r border-dashed border-black/20" />
+              <div className="flex-1" />
             </div>
           </div>
         ))}
@@ -39,9 +39,9 @@ export default function DesktopGridLayout({
 
       {/* Borda inferior com espaçamento */}
       <div className="flex h-[10vh] border-t border-dashed border-black/20">
-        <div className="flex-1 border-l border-dashed border-black/20" />
+        <div className="flex-1 " />
         <div className="w-[747px] border-x border-dashed border-black/20" />
-        <div className="flex-1 border-r border-dashed border-black/20" />
+        <div className="flex-1 " />
       </div>
     </div>
   )

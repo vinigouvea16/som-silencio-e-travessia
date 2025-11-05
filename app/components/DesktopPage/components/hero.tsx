@@ -1,16 +1,8 @@
-export default function DesktopPage() {
+export default function DesktopHero() {
   return (
-    <>
-      <DesktopHome />
-    </>
-  )
-}
-
-function DesktopHome() {
-  return (
-    <div className=" h-[80vh] relative flex flex-col">
+    <div className="my-4 min-h-[80vh] relative flex flex-col">
       <div className="flex flex-col items-center absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 gap-1">
-        <span className="font-bold text-olive-dark tracking-wider text-2xl">
+        <span className="font-bold text-olive-dark tracking-tighter text-2xl">
           28, 29 e 30 de novembro
         </span>
         <h1 className="text-brown-dark tracking-wide font-family-arizona-flare text-5xl uppercase text-center">

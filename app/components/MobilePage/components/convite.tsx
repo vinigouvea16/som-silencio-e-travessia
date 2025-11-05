@@ -10,7 +10,7 @@ export default function Convite() {
       </h1>
       <p className="text-justify text-cream max-w-[220px] font-light font-family-arizona-sans text-base">
         Para{' '}
-        <span className="underline underline-offset-1 font-bold">
+        <span className="underline underline-offset-4 font-bold">
           buscadores de si,
         </span>{' '}
         para quem deseja trabalhar questões emocionais profundas, para quem está

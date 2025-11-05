@@ -58,23 +58,20 @@ export default function Form() {
   }
 
   return (
-    <div
-      className="flex flex-col bg-[url('../public/deserto.webp')] relative bg-center bg-cover min-h-screen py-11 px-6"
-      id="form"
-    >
-      <div className="flex flex-col gap-8 items-center z-10 max-w-md mx-auto w-full">
-        <h1 className="text-cream text-4xl font-family-arizona-sans font-bold tracking-tighter max-w-[220px] text-justify">
+    <div className="flex flex-col py-8" id="form">
+      <div className="flex flex-col gap-8 items-center z-10 max-w-md mx-auto">
+        <h1 className="text-brown-dark text-4xl font-family-arizona-sans font-medium tracking-tighter max-w-[220px] text-justify">
           Um convite à liberdade de ser, sentir e se reconectar com o que pulsa
           em silêncio dentro de você.
         </h1>
 
         {/* Investimento */}
         <div className="flex flex-col items-center gap-3">
-          <span className="border uppercase font-bold tracking-tighter text-2xl border-cream-light rounded-full px-4 py-1 text-cream font-family-arizona-sans">
+          <span className="border uppercase font-bold tracking-tighter text-2xl border-brown-medium rounded-full px-4 py-1 text-brown-dark font-family-arizona-sans">
             investimento: R$3.500
           </span>
-          <p className="font-thin tracking-tight text-center text-cream font-family-arizona-sans text-xl">
-            <span className="text-2xl">
+          <p className="font-thin tracking-tighter text-center text-brown-dark font-family-arizona-sans text-2xl">
+            <span className="text-3xl">
               Parcelamento: <br />
             </span>
             3x de R$1.130 <br />
@@ -84,12 +81,12 @@ export default function Form() {
 
         {/* Mensagem de sucesso/erro */}
         {submitStatus === 'success' && (
-          <div className="w-full bg-green-500/20 border border-green-500 text-cream-light p-4 rounded-lg text-center font-arizona-sans">
+          <div className="w-full bg-green-500/20 border border-green-500 text-brown-dark-light p-4 rounded-lg text-center font-arizona-sans">
             ✓ Inscrição enviada com sucesso! Entraremos em contato em breve.
           </div>
         )}
         {submitStatus === 'error' && (
-          <div className="w-full bg-red-500/20 border border-red-500 text-cream-light p-4 rounded-lg text-center font-arizona-sans">
+          <div className="w-full bg-red-500/20 border border-red-500 text-brown-dark-light p-4 rounded-lg text-center font-arizona-sans">
             ✗ Erro ao enviar. Tente novamente.
           </div>
         )}
@@ -103,7 +100,7 @@ export default function Form() {
           <div className="flex flex-col gap-1">
             <label
               htmlFor="nome"
-              className="text-cream-light font-family-arizona-flare  font-light"
+              className="text-brown-dark-light font-family-arizona-flare font-thin"
             >
               Nome completo
             </label>
@@ -125,7 +122,7 @@ export default function Form() {
           <div className="flex flex-col gap-1">
             <label
               htmlFor="telefone"
-              className="text-cream-light font-light font-family-arizona-flare "
+              className="text-brown-dark-light font-light font-family-arizona-flare "
             >
               Telefone / WhatsApp
             </label>
@@ -147,7 +144,7 @@ export default function Form() {
           <div className="flex flex-col gap-1">
             <label
               htmlFor="email"
-              className="text-cream-light font-family-arizona-flare font-light "
+              className="text-brown-dark-light font-family-arizona-flare font-light "
             >
               E-mail
             </label>
@@ -168,7 +165,7 @@ export default function Form() {
           <div className="flex flex-col gap-1">
             <label
               htmlFor="comoEncontrou"
-              className="text-cream-light font-family-arizona-flare font-light"
+              className="text-brown-dark-light font-family-arizona-flare font-light"
             >
               Como nos encontrou?
             </label>
@@ -209,11 +206,11 @@ export default function Form() {
           {/* Já participou */}
           <div className="flex flex-col gap-3">
             {/* biome-ignore lint/a11y/noLabelWithoutControl: <explanation> */}
-            <label className="text-cream-light font-light mx-auto font-family-arizona-sans ">
+            <label className="text-brown-dark-light font-light mx-auto font-family-arizona-sans ">
               Já participou de alguma experiência como esta?
             </label>
             <div className="flex mx-auto gap-4">
-              <label className="flex items-center gap-1 text-cream-light font-family-arizona-sans cursor-pointer">
+              <label className="flex items-center gap-1 text-brown-dark-light font-family-arizona-sans cursor-pointer">
                 <input
                   type="radio"
                   value="sim"
@@ -222,7 +219,7 @@ export default function Form() {
                 />
                 Sim!
               </label>
-              <label className="flex items-center gap-1 text-cream-light font-family-arizona-sans cursor-pointer">
+              <label className="flex items-center gap-1 text-brown-dark-light font-family-arizona-sans cursor-pointer">
                 <input
                   type="radio"
                   value="nao"
@@ -242,7 +239,7 @@ export default function Form() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="interesse"
-              className="text-cream-light font-family-arizona-flare font-light"
+              className="text-brown-dark-light font-family-arizona-flare font-light"
             >
               Escolha uma opção
             </label>
@@ -277,23 +274,17 @@ export default function Form() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="uppercase rounded-sm font-medium text-brown-dark font-family-arizona-flare bg-tan text-xl px-4 py-6 mx-auto mt-4 hover:bg-tan/90 transition-colors w-fit disabled:opacity-50"
+            className="uppercase rounded-sm font-medium text-olive-dark font-family-arizona-flare bg-tan text-xl px-4 py-6 mx-auto mt-4 hover:bg-tan/90 transition-colors w-fit disabled:opacity-50"
           >
             {isSubmitting ? 'Enviando...' : 'quero expandir'}
           </Button>
         </form>
 
-        {/* Logos */}
-        <div className="flex justify-between items-baseline w-full mt-8 px-10">
-          <Image src={'/losninos.png'} alt={''} width={104} height={21} />
-          <Image src={'/brain.png'} alt={''} width={59} height={26} />
-        </div>
-
         {/* Link de dúvidas */}
         <a
           href="https://wa.me/5541987392252"
           target="_blank"
-          className="underline text-cream-light font-light font-family-arizona-sans text-center"
+          className="underline text-brown-dark-light font-light font-family-arizona-sans text-center"
           rel="noreferrer"
         >
           Dúvidas? <span className="font-bold">Clique aqui</span> para falar com

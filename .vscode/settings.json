@@ -1,18 +1,21 @@
 {
-	"editor.formatOnSave": true,
-	"[typescript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"editor.codeActionsOnSave": {
-		"source.organizeImports.biome": "explicit"
-	},
-	"cSpell.words": [
-		"hget",
-		"hincrby",
-		"homapage",
-		"leon",
-		"subhero",
-		"zincrby",
-		"zrevrange"
-	]
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  },
+  "cSpell.words": [
+    "arizona",
+    "Enteógena",
+    "hget",
+    "hincrby",
+    "homapage",
+    "leon",
+    "Niños",
+    "subhero",
+    "zincrby",
+    "zrevrange"
+  ]
 }

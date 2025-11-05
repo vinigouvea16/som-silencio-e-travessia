@@ -12,7 +12,7 @@ export default function Hero() {
           som, silêncio
           <br /> <span className="font-bold italic">e travessia</span>
         </h1>
-        <h2 className="text-cream-light/90 font-light font-family-arizona-sans uppercase text-xs underline underline-offset-1">
+        <h2 className="text-cream-light/90 font-light font-family-arizona-sans uppercase text-xs underline underline-offset-2">
           imersão integrativa enteógena
         </h2>
       </div>
