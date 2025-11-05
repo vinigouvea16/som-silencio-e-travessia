@@ -15,9 +15,9 @@ export default function Local2() {
       </div>
       <a
         href="#form"
-        className="uppercase rounded-sm font-medium text-brown-dark bg-cream-light text-xl tracking-tighter px-2 py-1"
+        className="uppercase rounded-sm font-medium text-brown-dark bg-cream-light text-xl tracking-tight px-2 py-1 font-family-arizona-flare"
       >
-        Recanto
+        Pedir mais informações
       </a>
     </div>
   )
